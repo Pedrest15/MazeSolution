@@ -1,3 +1,4 @@
+import tkinter as tk
 from enum import Enum
 from typing import NamedTuple
 import random
@@ -16,10 +17,13 @@ class Cell(str, Enum):
 class MazeLocation(NamedTuple):
     row: int
     column: int
-
 class Maze:
-    def __init__(self, rows: int = 10, columns: int = 12, sparseness: float = 0.2,
-                 start = MazeLocation(0,1), goal = MazeLocation(9,10)) -> None:
+    def __init__(self, 
+                rows: int = 10,
+                columns: int = 12,
+                sparseness: float = 0.2,
+                start = MazeLocation(0,1),
+                goal = MazeLocation(9,10)) -> None:
         self.rows = rows
         self.columns = columns
         self.start = start
